@@ -35,9 +35,6 @@
                      */
                     $socketCreate = socket_create(AF_INET, SOCK_STREAM, 0);
 
-                    var_dump($socketCreate);
-                    
-
                     /**
                      * @param resource $socketCreate
                      * @param string address
