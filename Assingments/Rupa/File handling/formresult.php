@@ -11,17 +11,25 @@
 <boby>
 
 <?php
+$search=$_POST["search"];
+
 if($_SERVER["REQUEST_METHOD"] == "POST")
 
 {
 	$username=$_POST["username"];
 	$email=$_POST["email"];
 	$password=$_POST["password"];
+if ($search==$username) {
+	echo"Name :".$username. "<br> 
+	 Email :".$email."<br>
+	 password :".$password."<br>";
+}
 	}
 	
 	echo"Name :".$username. "<br> 
 	 Email :".$email."<br>
-	 password :".$password."<br>";
+	 password :".$password."<br><a href='search in form.php'><input type='submit'value='Home' name='back'></a> ";
+
 	 extract($_REQUEST);
 if($file=fopen("save info.txt", "a"));
 {
