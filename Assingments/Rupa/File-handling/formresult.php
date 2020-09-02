@@ -16,9 +16,12 @@
 	$search = $_POST["search"];
 	if (isset($_POST[$btn])) {
 
-		fopen("$username.txt", a);
+		fopen("$username.txt", "a");
 	}
 
+	/**
+	 * Show Result In formResult.php From searchInForm.php
+	 */
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$username = $_POST["username"];
 		$email = $_POST["email"];
