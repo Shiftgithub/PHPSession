@@ -11,43 +11,37 @@
 <boby>
 
 	<?php
-	$btn = $_POST["btn"];
 
 	$search = $_POST["search"];
-	if (isset($_POST[$btn])) {
+	if (isset($_POST["btn"])) {
 
-		fopen("$username.txt", "a");
+		$s = fopen("$search.txt", "r") or die("File doesn't exist");
+
+		fclose($s);
 	}
 
-	/**
-	 * Show Result In formResult.php From searchInForm.php
-	 */
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	if (isset($_POST["save"])) {
 		$username = $_POST["username"];
 		$email = $_POST["email"];
 		$password = $_POST["password"];
-		if ($search == $username) {
-			echo "Name :" . $username . "<br> 
-			Email :" . $email . "<br>
-			password :" . $password . "<br>";
+
+
+
+		echo "Name :" . $username . "<br> 
+	 Email :" . $email . "<br>
+	 password :" . $password . "<br><a href='search in form.php'><input type='submit'value='Home' name='back'></a> ";
+
+		extract($_REQUEST);
+		if ($file = fopen("$username.txt", "a")); {
+
+			fwrite($file, "Name :");
+			fwrite($file, $username . "\n");
+			fwrite($file, "Email :");
+			fwrite($file, $email . "\n");
+			fwrite($file, "Password :");
+			fwrite($file, $password . "\n");
+			fclose($file);
 		}
-	}
-
-	echo "Name :" . $username . "<br> 
-		Email :" . $email . "<br>
-		password :" . $password . "<br><a href='search in form.php'><input type='submit'value='Home' name='back'></a> ";
-
-	extract($_REQUEST);
-	if ($file = fopen("$username.txt", "a")); {
-
-
-		fwrite($file, "Name :");
-		fwrite($file, $username . "\n");
-		fwrite($file, "Email :");
-		fwrite($file, $email . "\n");
-		fwrite($file, "Password :");
-		fwrite($file, $password . "\n");
-		fclose($file);
 	}
 	?>
 	</body>
