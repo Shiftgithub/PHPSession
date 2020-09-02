@@ -1,3 +1,0 @@
-Name :sojib
-Email :sojib@g.com
-Password :12

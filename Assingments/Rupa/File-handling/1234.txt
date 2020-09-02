@@ -1,3 +1,0 @@
-Name :1234
-Email :ad@g.com
-Password :asdfg
