@@ -40,7 +40,7 @@
 
 		
 
-		$physices->setName('Physices Books);
+		$physices->setName('Physices Books');
 
 		print $physices->getName();
 	?>

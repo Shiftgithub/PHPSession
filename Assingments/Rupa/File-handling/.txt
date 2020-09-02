@@ -10,6 +10,7 @@ Password :
 Name :
 Email :
 Password :
+<<<<<<< HEAD:Assingments/Rupa/File handling/.txt
 Name :
 Email :
 Password :
@@ -37,3 +38,5 @@ Password :
 Name :
 Email :
 Password :
+=======
+>>>>>>> 84c732854255f120bf903af617c8d6c2a2dcb883:Assingments/Rupa/File-handling/.txt
