@@ -12,11 +12,9 @@
 
 	<?php
 
-	$search = $_POST["search"];
 	if (isset($_POST["btn"])) {
-
+		$search = $_POST["search"];
 		$s = fopen("$search.txt", "r") or die("File doesn't exist");
-
 		fclose($s);
 	}
 
