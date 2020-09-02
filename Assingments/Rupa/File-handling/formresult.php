@@ -26,8 +26,8 @@
 
 
 		echo "Name :" . $username . "<br> 
-	 Email :" . $email . "<br>
-	 password :" . $password . "<br><a href='search in form.php'><input type='submit'value='Home' name='back'></a> ";
+			Email :" . $email . "<br>
+			password :" . $password . "<br><a href='search in form.php'><input type='submit'value='Home' name='back'></a> ";
 
 		extract($_REQUEST);
 		if ($file = fopen("$username.txt", "a")); {
