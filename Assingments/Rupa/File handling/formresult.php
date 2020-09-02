@@ -11,7 +11,12 @@
 <boby>
 
 <?php
+$btn=$_POST["btn"];
 $search=$_POST["search"];
+if (isset($_POST[$btn])) {
+
+	fopen("$username.txt",a);
+}
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 
@@ -31,8 +36,10 @@ if ($search==$username) {
 	 password :".$password."<br><a href='search in form.php'><input type='submit'value='Home' name='back'></a> ";
 
 	 extract($_REQUEST);
-if($file=fopen("save info.txt", "a"));
+if($file=fopen("$username.txt","a"));
 {
+	
+	
 fwrite($file, "Name :");
 fwrite($file, $username ."\n");
 fwrite($file, "Email :");

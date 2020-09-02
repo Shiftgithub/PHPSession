@@ -1,10 +1,9 @@
-
-<html>
+  <html>
 <head>
 <titel></title>
 	<style type="">
 .box{
-	  : 100px;
+	  
 	height: 230px;
 	width: 400px;
 	background: #383838;
@@ -25,8 +24,10 @@
 	<h2 style="color: white;margin: 15px; ">Student's Information</h2>
 
 <form method="POST"action="formresult.php">
-
-<input type="search" name="search" style="margin-left: 8px; border-radius: 10%;padding: 5px;"placeholder="search an ID">
+<div class="search-box">
+<input type="search" name="search" style="margin-left: 8px; border-radius: 5%;padding: 5px;"placeholder="search an ID">
+<button class="btn"name="btn">Search</button>
+</div>
 <div class="input-box">
 	
 		<label for="" style=" color: white;">Username</label>
