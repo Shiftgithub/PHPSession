@@ -7,7 +7,7 @@
 			background:linear-gradient(to bottom, #99ccff 0%, #ccffff 100%);
 		}
 			.box {
-				height: 350px;
+				height: 360px;
 				width: 370px;
 				background: #383838;
 				margin-left: 200px;
@@ -58,28 +58,28 @@
 		<h2 style="color: white;margin: 15px; ">Student's Information</h2>
 		<form method="POST" action="formresult.php">
 			<div class="search-box">
-				<input type="search" name="search" style="margin-left: 8px; border-radius: 5%;padding: 5px;" placeholder="search an ID">
+				<input type="search" name="search" style="margin-left: 8px; border-radius:5px;padding: 5px; background-color: #d9d9d9;" placeholder="search an ID">
 				<button class="btn" name="btn">Search</button>
 			</div>
 			<div class="input-box">
 				<label for="" style=" color: white;">Student's ID:</label>
-				<input type="text" name="username" autocomplete="off" style="margin-left: 52px;">
+				<input type="text" name="username" autocomplete="off" style="margin-left: 52px;background-color: #d9d9d9; padding: 3px; border-radius: 5px;">
 			</div>
 			<div class="input-box">
 				<label style="margin-left: 5px;  color: white;">Name:</label>
-				<input type="text" name="name" autocomplete="off" style="margin-left: 89px;">
+				<input type="text" name="name" autocomplete="off" style="margin-left: 89px; background-color: #d9d9d9; padding: 3px; border-radius: 5px;">
 			</div>
 			<div class="input-box">
 				<label style="margin-left: 5px;  color: white;">Email:</label>
-				<input type="email" name="email" autocomplete="off" style="margin-left: 89px;">
+				<input type="email" name="email" autocomplete="off" style="margin-left: 89px; background-color: #d9d9d9; padding: 3px; border-radius: 5px;">
 			</div>
 			<div class="input-box">
 				<label style="margin-left: 5px;  color: white;">Contact Number:</label>
-				<input type="number" name="number" autocomplete="off"style="margin-left: 22px;">
+				<input type="number" name="number" autocomplete="off"style="margin-left: 22px; background-color: #d9d9d9; padding: 3px; border-radius: 5px;">
 			</div>
 			<div class="input-box">
 				<label style="margin-left: 5px; color: white;">Address: </label>
-				<input type="text" name="address" autocomplete="off"style="margin-left: 75px;">
+				<input type="text" name="address" autocomplete="off"style="margin-left: 75px; background-color: #d9d9d9; padding: 3px; border-radius: 5px;">
 			</div>
 			<input type="submit" class="btn-btn" name="save" value="Save"/ style="color:white; background:#380000;margin-left:22px;padding: 8px;border-radius: 10%; ">
 		</form>
