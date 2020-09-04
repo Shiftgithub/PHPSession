@@ -1,0 +1,26 @@
+<table class="table table-inverse table-responsive table-hover">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>Id:</th>
+                    <th>stu00000</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Name:</td>
+                    <td>Sajib Adhikery</td>
+                </tr>
+                <tr>
+                    <td scope="row">Email:</td>
+                    <td>sajibadhikery@gmail.com</td>
+                </tr>
+                <tr>
+                    <td scope="row">Number:</td>
+                    <td>01932450506</td>
+                </tr>
+                <tr>
+                    <td scope="row">Address:</td>
+                    <td>Kallyanpur</td>
+                </tr>
+            </tbody>
+            </table>
