@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * User Defined Function
+ * @param $data = post_inputs
+ * @return string
+ */
 function test_input($data)
 {
     $data = trim($data);
@@ -8,16 +13,28 @@ function test_input($data)
     return $data;
 }
 
+/**
+ * 
+ */
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $P = $_POST;
-    if (isset($P['id']) && isset($P['name']) && isset($P['email']) && isset($P['num']) && isset($P['add'])) {
+    if (isset($P['id']) && isset($P['name']) && isset($P['email']) && isset($P['num']) && isset($P['add']))
+    {
+        /**
+         * @param string
+         * @return string as trim , stripslashes, htmlspecialchars. 
+         */  
         $id = test_input($P['id']);
         $name = test_input($P['name']);
         $email = test_input($P['email']);
         $num = test_input($P['num']);
         $add = test_input($P['add']);
 
-        if ($file = fopen("dataZone/".$id.".txt", "w")) {
+        if ($file = fopen("dataZone/".$id.".txt", "w")) 
+        {
+            /**
+             * $store = output string.
+             */
             $store = '<table class="table table-inverse table-responsive table-hover">
             <thead class="thead-inverse">
                 <tr>
@@ -45,9 +62,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             </tbody>
             </table>';
 
+            /**
+             * @param resource
+             * @param string
+             * @return resource/bool 
+             */
             if (fwrite($file, $store)) {
                 $color = "primary";
                 $alert = "Data Inserted";
+                fclose($file);
             }
         }
     }
@@ -61,10 +84,14 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
         if ($file = fopen("dataZone/".$studid.".txt","r")) 
         {
+            /**
+             * $store = read data form file.
+             */
             $store = fread($file, filesize("dataZone/".$studid.".txt"));
+
+            fclose($file);
         } else 
         {
-            
             echo "Data Not Found";
         }
     }
@@ -87,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 <body>
     <div class="container">
         <div class="<?= empty($color) ? "" : $color ?>"><?= empty($alert) ? "" : $alert ?></div>
-
+        <!-- Output Section -->
         <?= empty($store)? "": $store?>
         
         <a class="btn btn-primary" href="inputForm.php" role="button">Back to Information Form</a>
