@@ -1,0 +1,5 @@
+Student's ID :01
+Name :Adidas
+Email :add@gmail.com
+Contact number :123456789
+Address :asdadadad

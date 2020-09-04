@@ -75,7 +75,7 @@
 			</div>
 			<div class="input-box">
 				<label style="margin-left: 5px;  color: white;">Contact Number:</label>
-				<input type="number" name="number" autocomplete="off"style="margin-left: 22px;">
+				<input type="text" name="number" autocomplete="off"style="margin-left: 22px;">
 			</div>
 			<div class="input-box">
 				<label style="margin-left: 5px; color: white;">Address: </label>
