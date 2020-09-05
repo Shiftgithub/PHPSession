@@ -39,21 +39,21 @@
 		      <tr><td>Email :</td><td>" . $email . "</td> </tr>
 			<tr><td>Contact Number :</td><td>" . $number . "</td> </tr>
 			<tr><td>Address :</td><td>" . $address . "</td> </tr></table>";
-			echo "<br><a href='search in form.php'><input type='submit'value='Home' name='back'></a> ";
+			echo "<br><a href='searchinform.php'><input type='submit'value='Home' name='back'></a> ";
 
 		extract($_REQUEST);
 		if ($file = fopen("$username.txt", "a")); {
 
-			fwrite($file, "Student's ID :");echo "</td><td>";
-			fwrite($file, $username . "\n");echo "</td></tr>";
-			fwrite($file, "Name :");
-			fwrite($file, $name . "\n");
-			fwrite($file, "Email :");
-			fwrite($file, $email . "\n");
-			fwrite($file, "Contact number :");
-			fwrite($file, $number."\n");
-			fwrite($file, "Address :");
-			fwrite($file,$address."\n");
+			fwrite($file, "<table border=1><tr><td>Student's ID :</td><td>");
+			fwrite($file, $username . "</td></tr>");
+			fwrite($file, "<tr><td>Name :</td><td>");
+			fwrite($file, $name . "</td></tr>");
+			fwrite($file, "<tr><td>Email :</td><td>");
+			fwrite($file, $email . "</td></tr>");
+			fwrite($file, "<tr><td>Contact number :</td><td>");
+			fwrite($file, $number."</td></tr>");
+			fwrite($file, "<tr><td>Address :</td><td>");
+			fwrite($file,$address."</td></tr>");
 			fclose($file);
 		}
 	}
