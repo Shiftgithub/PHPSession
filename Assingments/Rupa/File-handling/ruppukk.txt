@@ -1,1 +1,0 @@
-<table border=1><tr><td>Student's ID :</td><td>ruppukk</td></tr><tr><td>Name :</td><td>llll</td></tr><tr><td>Email :</td><td>asdadsad@g.com</td></tr><tr><td>Contact number :</td><td>123456</td></tr><tr><td>Address :</td><td>asdasdad</td></tr>

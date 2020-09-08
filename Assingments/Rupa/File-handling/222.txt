@@ -1,1 +1,0 @@
-<table border=1px><tr><td>Student's ID :</td><td>222</td></tr><tr><td>Name :</td><td>cgfh</td></tr><tr><td>Email :</td><td>fgch@g.com</td></tr><tr><td>Contact number :</td><td>8556</td></tr><tr><td>Address :</td><td>vbn</td></tr>
