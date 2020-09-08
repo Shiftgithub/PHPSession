@@ -81,7 +81,6 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     if (isset($G['studid'])) {
         $studid = $G['studid'];
 
-
         if ($file = fopen("dataZone/".$studid.".txt","r")) 
         {
             /**
