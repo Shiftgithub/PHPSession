@@ -55,12 +55,16 @@
 
 <body>
 	<div class="box">
-		<h2 style="color: white;margin: 15px; ">Student's Information</h2>
+		<h2 style="color: white;margin: 15px; ">
+        <!-- Creating a form that will store student's information -->
+		Student's Information</h2>
 		<form method="POST" action="formresult.php">
 			<div class="search-box">
 				<input type="search" name="search" style="margin-left: 8px; border-radius:5px;padding: 5px; background-color: #d9d9d9;" placeholder="search an ID">
 				<button class="btn" name="btn">Search</button>
-			</div>
+			</div> 
+			<!-- search box and button created -->
+
 			<div class="input-box">
 				<label for="" style=" color: white;">Student's ID:</label>
 				<input type="text" name="username" autocomplete="off" style="margin-left: 52px;background-color: #d9d9d9; padding: 3px; border-radius: 5px;">
@@ -81,6 +85,7 @@
 				<label style="margin-left: 5px; color: white;">Address: </label>
 				<input type="text" name="address" autocomplete="off"style="margin-left: 75px; background-color: #d9d9d9; padding: 3px; border-radius: 5px;">
 			</div>
+			<!-- submit button -->
 			<input type="submit" class="btn-btn" name="save" value="Save"/ style="color:white; background:#380000;margin-left:22px;padding: 8px;border-radius: 10%; ">
 		</form>
 	</div>
