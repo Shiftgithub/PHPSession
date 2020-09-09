@@ -21,7 +21,7 @@
 	 {
 		$search = $_POST["search"]; /*Stored the searched id*/
 
-		$s = fopen("Textdoc/$search.txt", "r") or die("File doesn't exist"); /* Opened the file of searched id if exist,otherwise show the given message*/ 
+		$s = fopen("Textdoc/$search.txt", "r") or die(" !!!Sorry...File doesn't exist"); /* Opened the file of searched id if exist,otherwise show the given message*/ 
 		echo fread($s, filesize("Textdoc/$search.txt")); /* Read the information of the file and show to the user */
 		fclose($s); /* Close the file */
 	}
