@@ -81,7 +81,6 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     if (isset($G['studid'])) {
         $studid = $G['studid'];
 
-
         if ($file = fopen("dataZone/".$studid.".txt","r")) 
         {
             /**
@@ -115,6 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     <div class="container">
         <div class="<?= empty($color) ? "" : $color ?>"><?= empty($alert) ? "" : $alert ?></div>
         <!-- Output Section -->
+
         <?= empty($store)? "": $store?>
         
         <a class="btn btn-primary" href="inputForm.php" role="button">Back to Information Form</a>

@@ -1,68 +1,75 @@
 <html>
 
 <head>
-	<titel>Information Form</title>
-		<style>
-		body{
-			background:linear-gradient(to bottom, #99ccff 0%, #ccffff 100%);
+	<title>Information Form</title>
+	<style>
+		body {
+			background: linear-gradient(to bottom, #99ccff 0%, #ccffff 100%);
 		}
-			.box {
-				height: 360px;
-				width: 370px;
-				background: #383838;
-				margin-left: 200px;
-				margin-top: 100px;
-				box-shadow: 1px 1px 2px black, 0 0 25px #696969, 0 0 5px darkblue;
-				border-radius: 2%;
-			}
 
-			.input-box {
-				margin: 20px;
-			}
-			.btn-btn{
-				background-color:  #ff4d4d;
-				border: none;
-                border-radius: 15px;
-                font-size: 16px;
-                width: 70px;
-			}
-			
-			.btn-btn:hover {background:red;}
-			.btn{
+		.box {
+			height: 360px;
+			width: 370px;
+			background: #383838;
+			margin-left: 200px;
+			margin-top: 100px;
+			box-shadow: 1px 1px 2px black, 0 0 25px #696969, 0 0 5px darkblue;
+			border-radius: 2%;
+		}
 
-				display: inline-block;
-  padding: 5px 10px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color:  #ff4d4d;
-  border: none;
-  border-radius: 10px;
-			}
+		.input-box {
+			margin: 20px;
+		}
 
-.btn:hover {background: #ff9999;}
+		.btn-btn {
+			background-color: #ff4d4d;
+			border: none;
+			border-radius: 15px;
+			font-size: 16px;
+			width: 70px;
+		}
 
-.btn:active {
-  background-color: #ff4d4d;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-		</style>
+		.btn-btn:hover {
+			background: red;
+		}
+
+		.btn {
+
+			display: inline-block;
+			padding: 5px 10px;
+			font-size: 16px;
+			cursor: pointer;
+			text-align: center;
+			text-decoration: none;
+			outline: none;
+			color: #fff;
+			background-color: #ff4d4d;
+			border: none;
+			border-radius: 10px;
+		}
+
+		.btn:hover {
+			background: #ff9999;
+		}
+
+		.btn:active {
+			background-color: #ff4d4d;
+			box-shadow: 0 5px #666;
+			transform: translateY(4px);
+		}
+	</style>
 </head>
 
 <body>
 	<div class="box">
 		<h2 style="color: white;margin: 15px; ">
-        <!-- Creating a form that will store student's information -->
-		Student's Information</h2>
+			<!-- Creating a form that will store student's information -->
+			Student's Information</h2>
 		<form method="POST" action="formresult.php">
 			<div class="search-box">
 				<input type="search" name="search" style="margin-left: 8px; border-radius:5px;padding: 5px; background-color: #d9d9d9;" placeholder="search an ID">
 				<button class="btn" name="btn">Search</button>
-			</div> 
+			</div>
 			<!-- search box and button created -->
 
 			<div class="input-box">
@@ -79,11 +86,11 @@
 			</div>
 			<div class="input-box">
 				<label style="margin-left: 5px;  color: white;">Contact Number:</label>
-				<input type="number" name="number" autocomplete="off"style="margin-left: 22px; background-color: #d9d9d9; padding: 3px; border-radius: 5px;">
+				<input type="number" name="number" autocomplete="off" style="margin-left: 22px; background-color: #d9d9d9; padding: 3px; border-radius: 5px;">
 			</div>
 			<div class="input-box">
 				<label style="margin-left: 5px; color: white;">Address: </label>
-				<input type="text" name="address" autocomplete="off"style="margin-left: 75px; background-color: #d9d9d9; padding: 3px; border-radius: 5px;">
+				<input type="text" name="address" autocomplete="off" style="margin-left: 75px; background-color: #d9d9d9; padding: 3px; border-radius: 5px;">
 			</div>
 			<!-- submit button -->
 			<input type="submit" class="btn-btn" name="save" value="Save"/ style="color:white; background:#380000;margin-left:22px;padding: 8px;border-radius: 10%; ">

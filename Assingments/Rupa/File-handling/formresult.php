@@ -44,7 +44,6 @@
 			<tr><td>Contact Number :</td><td>" . $number . "</td> </tr>
 			<tr><td>Address :</td><td>" . $address . "</td> </tr></table>";
 			/*Back button for Home page*/
-			echo "<br><a href='searchinform.php'><input type='submit'value='Home' name='back'></a> ";
 
 		extract($_REQUEST);/*For Store form data*/
 
@@ -65,6 +64,11 @@
 		}
 	}
 	?>
+	<a href='searchinform.php'>
+					<button>
+							Home
+					</button>	
+				</a> 
 	</body>
 
 </html>
