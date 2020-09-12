@@ -45,8 +45,6 @@
 			<tr><td>Address :</td><td>" . $address . "</td> </tr></table>";
 			/*Back button for Home page*/
 
-		extract($_REQUEST);/*For Store form data*/
-
 		if ($file = fopen("Textdoc/$username.txt", "a")); /*Opening a file named of given id by user*/
 		{
 
