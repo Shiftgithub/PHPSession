@@ -27,7 +27,7 @@
 	}
       
 	if (isset($_POST["save"])) /*Results for 'save' button */
-	  {
+	{
 	  	/*Storing form information in variables */
 		$username = $_POST["username"];
 		$name=$_POST["name"];
