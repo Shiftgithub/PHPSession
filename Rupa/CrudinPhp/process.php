@@ -25,15 +25,15 @@ if (isset($_GET['delete'])) {
 }
 
 if (isset($_GET['edit'])) {
-	$id = $_GET['edit']; // Getting value from crud.php edit button
+	$id = $_GET['edit']; // Getting value from index.php edit button
 	$update = true;
 	$result = $mysqli->query("SELECT * FROM crud WHERE  id =$id") or die($mysqli->error);
 	if ($result) {
 		$row = $result->fetch_assoc();
 
-		$name = $row['name'];
-		$location = $row['location'];
-		$email = $row['email'];
+		echo $name = $row['name'];echo "<br>";
+		echo $location = $row['location']."<br>";
+		echo $email = $row['email']."<br>";
 	}
 }
 

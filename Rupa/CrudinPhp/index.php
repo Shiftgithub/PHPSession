@@ -74,15 +74,15 @@
 				<div class="form-group">
 					<h1 class="text-info" id="insert"> Insert Information</h1>
 					<label>Name</label>
-					<input type="text" name="name" class="form-control" placeholder="Enter your name" required="please fill out the section" style="padding: 10px;">
+					<input type="text" <?php if (isset($_GET['edit']))?>  value=$name name="name" class="form-control" required="" style="padding: 10px;">
 				</div>
 				<div class="form-group">
 					<label>location</label>
-					<input type="text" name="location" class="form-control" placeholder="Enter your location" required="please fill out the section" style="padding: 10px;">
+					<input type="text" name="location" class="form-control" required="" style="padding: 10px;">
 				</div>
 				<div class="form-group">
 					<label>email</label>
-					<input type="email" name="email" class="form-control" placeholder="Enter your email" required="please fill out the section" style="padding: 10px;">
+					<input type="email" name="email" class="form-control"  required="" style="padding: 10px;">
 				</div>
 
 				<?php
@@ -97,9 +97,10 @@
 				<?php endif; ?>
 
 			</div>
-	</div>
+	
 
-	</form> >
+	</form> 
+	</div>
 
 
 
