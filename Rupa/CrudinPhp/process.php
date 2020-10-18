@@ -31,9 +31,9 @@ if (isset($_GET['edit'])) {
 	if ($result) {
 		$row = $result->fetch_assoc();
 
-		echo $name = $row['name'];echo "<br>";
-		echo $location = $row['location']."<br>";
-		echo $email = $row['email']."<br>";
+		 $name = $row['name'];
+		 $location = $row['location'];
+		 $email = $row['email'];
 	}
 }
 
@@ -42,7 +42,7 @@ if (isset($_POST['update'])) {
 	$name = $_POST['name'];
 	$location = $_POST['location'];
 	$email = $_POST['email'];
-	$var_id = $_POST['var_id'];
+	
 
 	$mysqli->query("UPDATE crud SET name='$name',location='$location',
 		  email ='$email' WHERE id=$id");
