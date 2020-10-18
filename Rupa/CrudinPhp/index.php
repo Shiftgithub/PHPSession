@@ -69,20 +69,20 @@
 	</div>
 	<div class="row justify-content-center">
 		<form method="POST">
-			<input type="text" name="id" value="<?= $id ?>">
+			<input type="hidden" name="id" value="<?= $id ?>">
 			<div class="info">
 				<div class="form-group">
 					<h1 class="text-info" id="insert"> Insert Information</h1>
 					<label>Name</label>
-					<input type="text" <?php if (isset($_GET['edit']))?>  value=$name name="name" class="form-control" required="" style="padding: 10px;">
+					<input type="text" <?php if (isset($_GET['edit']))?>  value= "<?php echo $name ?>" name="name" class="form-control" required="" style="padding: 10px;">
 				</div>
 				<div class="form-group">
 					<label>location</label>
-					<input type="text" name="location" class="form-control" required="" style="padding: 10px;">
+					<input type="text" <?php if (isset($_GET['edit']))?>  value= "<?php echo $location ?>"name="location" class="form-control" required="" style="padding: 10px;">
 				</div>
 				<div class="form-group">
 					<label>email</label>
-					<input type="email" name="email" class="form-control"  required="" style="padding: 10px;">
+					<input type="email" <?php if (isset($_GET['edit']))?>  value= "<?php echo $email ?>" name="email" class="form-control"  required="" style="padding: 10px;">
 				</div>
 
 				<?php
