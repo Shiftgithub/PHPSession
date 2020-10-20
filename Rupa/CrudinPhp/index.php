@@ -10,7 +10,7 @@
 		}
 
 		#insert {
-			margin-left: 160px;
+			margin-left: 60px;
 		}
 
 		.info {
@@ -32,8 +32,18 @@
 </head>
 
 <body>
-	<?php
-
+	
+	 <?php 
+	 if(isset($_SESSION['messege'])): ?>
+      <div class="alert alert-<?= $_SESSION['msg_type'] ?>">
+         <?php 
+            
+             echo "<center><h3>".$_SESSION['messege']."</h3></center>";
+             unset ($_SESSION['messege']);
+         ?>
+      </div>
+      <?php endif; ?>
+     <?php
 	$mysqli = new mysqli('localhost', 'root', '', 'crud') or die(mysqli_error($mysqli));
 	$result = $mysqli->query("SELECT* FROM crud") or die($mysqli->error);
 	//pre_r($result);

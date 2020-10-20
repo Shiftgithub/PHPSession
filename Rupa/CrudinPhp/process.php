@@ -1,4 +1,5 @@
 <?php
+session_start();
 $mysqli = new mysqli('localhost', 'root', '', 'crud') or die(mysqli_error($mysqli));
 $update = false;
 $name = "";
@@ -6,13 +7,14 @@ $location = "";
 $email = "";
 $var_id = "";
 $id = "";
-
+ //Insertion part
 if (isset($_POST['submit'])) {
 	$name = $_POST['name'];
 	$location = $_POST['location'];
 	$email = $_POST['email'];
 	$mysqli->query("INSERT INTO crud(name,location,email) VALUES ('$name','$location','$email')") or die($mysqli->error);
 }
+//Deletion Part
 if (isset($_GET['delete'])) {
 	$id = $_GET['delete'];
 
