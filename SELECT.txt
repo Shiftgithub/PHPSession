@@ -1,0 +1,10 @@
+SELECT
+    venues.id,
+    venues.name,
+    hall_buildings.name,
+    COUNT(hall_buildings.id) AS number_of_hall,
+    SUM(halls.num_of_rooms) AS  num_room
+FROM venues 
+JOIN hall_buildings ON hall_buildings.venue_id = venues.id
+JOIN (SELECT hall_id, COUNT(id) AS num_of_rooms FROM hall_rooms GROUP BY hall_id) AS halls ON halls.hall_id = hall_buildings.id
+GROUP BY venues.id
