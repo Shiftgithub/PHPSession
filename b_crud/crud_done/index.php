@@ -1,9 +1,10 @@
 <!-- db_connection join !-->
 <?php  include 'db_connection.php'; ?> 
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Turan</title>
+	<title>Bishawjit Crud</title>
 	<!--Add page Responsive Web Design link  -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Add Bootstrap link-->
@@ -13,9 +14,22 @@
 </head>
 <body>
 	<?php require_once "processing.php"; ?>
+
+  <!--SESSION MESSAGE-->
+  <?php
+    if(isset($_SESSION['message'])): ?>
+
+   <div class="alert alert-<?= $_SESSION['color'] ?>">
+   <?php 
+      echo "<center><b>".$_SESSION['message']."</b></center>"; 
+      unset($_SESSION);
+   ?>
+ </div>
+<?php endif; ?>
+
 	<div class="container">
 		 <form method="POST" action="processing.php">
-      <input type="hidden" name="id" value="<?= $id ?>" >
+      <input type="hidden" name="id" value="<?= $id ?>">
 		 	<div class="col-6">
 		 		<label>Name:</label>
 		 	</div>
@@ -72,12 +86,9 @@
         <a href="processing.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
       </td>
     </tr>
-      <?php endforeach; ?>
- 
+      <?php endforeach; ?> 
   </tbody>
 </table>
-		</div>
-	
+		</div>	
 </body>
-
 </html>

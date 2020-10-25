@@ -1,5 +1,5 @@
 <?php
-  
+  session_start();
   include 'db_connection.php';
 
     $name = "";
@@ -9,20 +9,30 @@
     $update = false;
 
   if (isset($_POST['submit'])) {
+
+    
   	$name = $_POST['name'];
   	$email = $_POST['email'];
   	$password = $_POST['password'];
 
   	$insert ="INSERT INTO details(name,email,password) VALUES('$name','$email','$password')";
   	$connection->query($insert); 
+    
+    $_SESSION['message'] = "SAVED SUCCESSFULLY";
+    $_SESSION['color'] = "success";
+
      header('location: index.php');
   }
 
 
   if(isset($_GET['delete'])){
+
+      
+
      	$id = $_GET['delete'];
      	$connection->query("DELETE FROM details WHERE  id =$id") or die($connection->error());
-      
+      $_SESSION['message'] = "DELETED SUCCESSFULLY";
+      $_SESSION['color'] = "danger";
        header('location: index.php');
 	 }
 
@@ -44,7 +54,7 @@
    }
 
 
-//update section
+    //update section
    if (isset($_POST['update'])){
       
       $id = $_POST['id']; 
@@ -55,7 +65,11 @@
       $password = $_POST['password'];
 
       $connection->query("UPDATE details SET name='$name',email ='$email',password='$password' WHERE id=$id");
-      header('location: index.php');
+
+    $_SESSION['message'] = "UPDATED SUCCESSFULLY";
+    $_SESSION['color'] = "info";
+
+    header('location: index.php');
       }
 
  ?>
