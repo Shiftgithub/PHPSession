@@ -1,23 +1,25 @@
 SELECT
-    venues.id,
-    venues.name,
-    COUNT(hall_buildings.id) AS total_hall,
-    SUM(halls.num_of_rooms) AS total_room,
-    SUM(halls.total_seat) AS total_seat
-FROM
-    venues
-LEFT JOIN hall_buildings ON hall_buildings.venue_id = venues.id
-LEFT JOIN(
-    SELECT
-        hall_id,
-        COUNT(id) AS num_of_rooms,
-        SUM(num_of_seats) AS total_seat
-    FROM
-        hall_rooms
-    GROUP BY
-        hall_id
-) AS halls
-ON
-    halls.hall_id = hall_buildings.id
-GROUP BY
-    venues.id
+                `venues`.`id`,
+                `venues`.`name`,
+                COUNT(h.name) AS total_hall,
+                SUM(halls.num_of_rooms) AS total_room,
+                SUM(halls.seats) AS total_seat
+            FROM
+                `venues`
+            RIGHT JOIN `hall_buildings` AS `h`
+            ON
+                `h`.`venue_id` = `venues`.`id`
+            LEFT JOIN(
+                SELECT
+                    `hall_id`,
+                    COUNT(id) AS num_of_rooms,
+                    SUM(num_of_seats) AS seats
+                FROM
+                    hall_rooms
+                GROUP BY
+                    `hall_id`
+            ) AS halls
+            ON
+                `h`.`id` = `halls`.`hall_id`
+            GROUP BY
+                `venues`.`id`
