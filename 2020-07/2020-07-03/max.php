@@ -12,5 +12,6 @@
 	<h1>Round = <?php echo round(30.25); ?></h1>
 	<h1>Round = <?php echo round(30.50); ?></h1>
 	<h1>rand = <?php echo rand(99,10); ?></h1>
+	<h1>I WANT to teach hub;</h1>
 </body>
 </html>
